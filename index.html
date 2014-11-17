@@ -93,7 +93,6 @@ var btn =
 $('#login-btn');
 btn.onclick = function() {
     FB.login(function(response) {
-        Log.info('FB.login response', response);
         FB.api('/me?fields=name,statuses', processResult);
         btn.disabled = true;
         btn.innerHTML = 'Loading...';
